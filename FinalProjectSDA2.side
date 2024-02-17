@@ -1,0 +1,155 @@
+{
+  "id": "a09b7a34-2c53-4014-ab00-5c96a83eb194",
+  "version": "2.0",
+  "name": "FinalProjectSDA2",
+  "url": "https://www.way2automation.com",
+  "tests": [{
+    "id": "831d2ffe-51d7-47df-8913-0612819af29e",
+    "name": "Reset_button",
+    "commands": [{
+      "id": "8ae65705-a678-49c9-b733-692efda86706",
+      "comment": "",
+      "command": "open",
+      "target": "/angularjs-protractor/banking/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b676aa9-35e6-4caf-beeb-30fb748bae58",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "766x510",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18c1060f-0416-49b8-a1b1-528e7254c263",
+      "comment": "",
+      "command": "click",
+      "target": "css=.center:nth-child(1) > .btn",
+      "targets": [
+        ["css=.center:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Customer Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a922a60-9cb3-4c59-b5cf-6b3c9e1b83dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=userSelect",
+      "targets": [
+        ["id=userSelect", "id"],
+        ["name=userSelect", "name"],
+        ["css=#userSelect", "css:finder"],
+        ["xpath=//select[@id='userSelect']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "971455cb-958b-42f1-a780-fe42b1d48efd",
+      "comment": "",
+      "command": "select",
+      "target": "id=userSelect",
+      "targets": [],
+      "value": "label=Harry Potter"
+    }, {
+      "id": "6dcda7c1-6796-48f2-92a6-bbe9581ebe44",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-default",
+      "targets": [
+        ["css=.btn-default", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42dca605-5fc0-4d60-a317-aab40a4b1a8f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Deposit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5cb4ca1-c86d-48e8-b73f-c41648df3a84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@type='number']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30b90a3e-00a2-4cca-a236-bd7385bfd5ec",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@type='number']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "100"
+    }, {
+      "id": "abc79ef0-0d8b-494d-b4ac-d19b47f868ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-default",
+      "targets": [
+        ["css=.btn-default", "css:finder"],
+        ["xpath=//button[@value='']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8a26570-fc42-450e-9115-2e49796172d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-lg:nth-child(1)",
+      "targets": [
+        ["css=.btn-lg:nth-child(1)", "css:finder"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Transactions')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ec594c4-dd79-4c8c-897e-5964dd1de5aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fixedTopBox > .btn:nth-child(3)",
+      "targets": [
+        ["css=.fixedTopBox > .btn:nth-child(3)", "css:finder"],
+        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Reset')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d7a19b2-9d15-4321-8f72-796e46bb701a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fixedTopBox > .btn:nth-child(1)",
+      "targets": [
+        ["css=.fixedTopBox > .btn:nth-child(1)", "css:finder"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Back')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "765bc1c4-ac55-4243-8990-b875707c6c89",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["831d2ffe-51d7-47df-8913-0612819af29e"]
+  }],
+  "urls": ["https://www.way2automation.com/"],
+  "plugins": []
+}
