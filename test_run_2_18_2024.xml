@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<run>
+	<id>R2</id>
+	<name>Test Run 2/18/2024</name>
+	<description>Drugi Test Run - 18.02.2024</description>
+	<config></config>
+	<createdon>2024-02-18T14:08:15Z</createdon>
+		<completed>false</completed>
+		<milestone></milestone>
+	<stats>
+										<passed>
+			<percent>80</percent>
+			<count>4</count>
+		</passed>
+											<blocked>
+			<percent>0</percent>
+			<count>0</count>
+		</blocked>
+											<untested>
+			<percent>0</percent>
+			<count>0</count>
+		</untested>
+											<retest>
+			<percent>0</percent>
+			<count>0</count>
+		</retest>
+											<failed>
+			<percent>20</percent>
+			<count>1</count>
+		</failed>
+																																																				</stats>	<sections>
+		<section>
+		<name>Michał Ryzner - Customer Test Suite</name>
+		<description>Testy sekcji Customer i jej podsekcji</description>
+										<sections>
+		<section>
+		<name>Test przycisku Customer Login</name>
+		<description>test poprawności zachowania przycisku Customer Login</description>
+									</section>
+		<section>
+		<name>Testy pola Transactions</name>
+		<description>testy funkcjonalności dostępnych w polu Transactions</description>
+									</section>
+		<section>
+		<name>Test przycisku Deposit</name>
+		<description>test poprawności zachowania przycisku Deposit</description>
+									</section>
+		<section>
+		<name>Test przycisku Withdrawal</name>
+		<description>test poprawności zachowania przycisku Withdrawal</description>
+									</section>
+		<section>
+		<name>Logout button test</name>
+		<description>Weryfikacja poprawności działania przycisku Logout</description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Michał Ryzner - Bank Manager Test Suite</name>
+		<description>Testy sekcji Bank Manager i jej podsekcji</description>
+										<sections>
+		<section>
+		<name>Test funkcjonalności Add Customer</name>
+		<description>Weryfikacja poprawności działania funkcji Add Customer</description>
+						<tests>
+						            																																																																		<test>
+				<id>T8</id>
+				<title>Add Customer poprawne dane</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+															<steps_separated><step>
+<content>Kliknij zakładkę Add Customer</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name 3. Post Code, pod nim widoczny jest przycisk Add Customer</expected></step>
+<step>
+<content>Wprowadź przykładowe dane: 1. &quot;Jan&quot; 2. &quot;Kowalski&quot; 3. &quot;01-234&quot; i zatwierdź przyciskiem Add Customer</content><expected>Po zatwierdzeniu wyświetla się komunikat: &quot;Customer added successfuly with customer id:&quot; + numer, numer generowany jest automatycznie</expected></step>
+<step>
+<content>Wybierz zakładkę Customers</content><expected>Po wybraniu zakładki, widoczna jest tabela z danymi klient&amp;oacute;w banku, dane klienta &quot;Jan Kowalski&quot; są r&amp;oacute;wnież w tabeli</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C9</caseid>
+																			<casestatus></casestatus>
+																<caseassignedto></caseassignedto>
+																	<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2024-02-18T14:30:47Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Kliknij zakładkę Add Customer</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name 3. Post Code, pod nim widoczny jest przycisk Add Customer</expected><actual>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name 3. Post Code, pod nim widoczny jest przycisk Add Customer</actual><status>Passed</status></step>
+<step>
+<content>Wprowadź przykładowe dane: 1. &quot;Jan&quot; 2. &quot;Kowalski&quot; 3. &quot;01-234&quot; i zatwierdź przyciskiem Add Customer</content><expected>Po zatwierdzeniu wyświetla się komunikat: &quot;Customer added successfuly with customer id:&quot; + numer, numer generowany jest automatycznie</expected><actual>Po zatwierdzeniu wyświetla się komunikat: &quot;Customer added successfuly with customer id:10&quot;</actual><status>Passed</status></step>
+<step>
+<content>Wybierz zakładkę Customers</content><expected>Po wybraniu zakładki, widoczna jest tabela z danymi klient&amp;oacute;w banku, dane klienta &quot;Jan Kowalski&quot; są r&amp;oacute;wnież w tabeli</expected><actual>Po wybraniu zakładki, widoczna jest tabela z danymi klient&amp;oacute;w banku, dane klienta &quot;Jan Kowalski&quot; są r&amp;oacute;wnież w tabeli</actual><status>Passed</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-18T14:23:08Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Kliknij zakładkę Add Customer</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name 3. Post Code, pod nim widoczny jest przycisk Add Customer</expected><actual>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name 3. Post Code, pod nim widoczny jest przycisk Add Customer</actual><status>Passed</status></step>
+<step>
+<content>Wprowadź przykładowe dane: 1. &quot;Jan&quot; 2. &quot;Kowalski&quot; 3. &quot;01-234&quot; i zatwierdź przyciskiem Add Customer</content><expected>Po zatwierdzeniu wyświetla się komunikat: &quot;Customer added successfuly with customer id:&quot; + numer, numer generowany jest automatycznie, klient zostaje dodany do listy klient&amp;oacute;w</expected><actual>Po zatwierdzeniu wyświetla się komunikat: &quot;Customer added successfuly with customer id:10&quot; - klient został dodany do listy klient&amp;oacute;w</actual><status>Passed</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-18T14:08:15Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Untested</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T9</id>
+				<title>Add Customer niepoprawne dane</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+															<steps_separated><step>
+<content>Kliknij zakładkę Add Customer</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name, 3. Post Code, pod formularzem widoczny jest przycisk Add Customer</expected></step>
+<step>
+<content>Wprowadź niepełne dane klienta (brak nazwiska): 1. &quot;Adam&quot; 2. &quot;&quot; 3. &quot;01-234&quot; i zatwierdź przyciskiem Add Customer</content><expected>Po zatwierdzeniu klient nie zostaje dodany, przy niewypełnionym polu wyświetla się komunikat/tooltip &quot;Proszę wypełnić to pole&quot;</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C10</caseid>
+																			<casestatus></casestatus>
+																<caseassignedto></caseassignedto>
+																	<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2024-02-18T14:25:04Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Kliknij zakładkę Add Customer</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name, 3. Post Code, pod formularzem widoczny jest przycisk Add Customer</expected><actual>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name, 3. Post Code, pod formularzem widoczny jest przycisk Add Customer</actual><status>Passed</status></step>
+<step>
+<content>Wprowadź niepełne dane klienta (brak nazwiska): 1. &quot;Adam&quot; 2. &quot;&quot; 3. &quot;01-234&quot; i zatwierdź przyciskiem Add Customer</content><expected>Po zatwierdzeniu klient nie zostaje dodany, przy niewypełnionym polu wyświetla się komunikat/tooltip &quot;Proszę wypełnić to pole&quot;</expected><actual>Po zatwierdzeniu klient nie zostaje dodany, przy niewypełnionym polu wyświetla się komunikat/tooltip &quot;Proszę wypełnić to pole&quot;</actual><status>Passed</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-18T14:08:15Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Untested</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+		<section>
+		<name>Test funkcjonalności Open Account</name>
+		<description>Weryfikacja poprawności działania funkcjonalności Open Account</description>
+						<tests>
+						            																																																																		<test>
+				<id>T10</id>
+				<title>Open Account poprawne dodanie konta</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+															<steps_separated><step>
+<content>Wybierz zakładkę Open Account</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</expected></step>
+<step>
+<content>Wybierz klienta - &quot;Jan Kowalski&quot; z listy klient&amp;oacute;w banku, wybierz walutę - &quot;Rupee&quot; z listy dostępnych walut i zatwierdź przyciskiem Process</content><expected>Po zatwierdzeniu wyświetla się komunikat: &quot;Account created successfuly with account Number:&quot; + numer. Numer konta generowany jest automatycznie, konto z danym numerem zostaje poprawnie dodane do listy kont danego klienta</expected></step>
+<step>
+<content>Wybierz zakładkę Customers</content><expected>Po wybraniu zakładki, widoczna jest tabela z danymi klient&amp;oacute;w banku, w tym numerami ich kont, klient &quot;Jan Kowalski&quot; posiada konto o numerze 1020</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C11</caseid>
+																			<casestatus></casestatus>
+																<caseassignedto></caseassignedto>
+																	<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2024-02-18T14:38:13Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Wybierz zakładkę Open Account</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</expected><actual></actual><status>Untested</status></step>
+<step>
+<content>Wybierz klienta - &quot;Jan Kowalski&quot; z listy klient&amp;oacute;w banku, wybierz walutę - &quot;Rupee&quot; z listy dostępnych walut i zatwierdź przyciskiem Process</content><expected>Po zatwierdzeniu wyświetla się komunikat: &quot;Account created successfuly with account Number:&quot; + numer. Numer konta generowany jest automatycznie, konto z danym numerem zostaje poprawnie dodane do listy kont danego klienta</expected><actual></actual><status>Untested</status></step>
+<step>
+<content>Wybierz zakładkę Customers</content><expected>Po wybraniu zakładki, widoczna jest tabela z danymi klient&amp;oacute;w banku, w tym numerami ich kont, klient &quot;Jan Kowalski&quot; posiada konto o numerze 1020</expected><actual>Po wybraniu zakładki, widoczna jest tabela z danymi klient&amp;oacute;w banku, w tym numerami ich kont, klient &quot;Jan Kowalski&quot; posiada konto o numerze 1020</actual><status>Passed</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-18T14:33:34Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Wybierz zakładkę Open Account</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</expected><actual>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</actual><status>Passed</status></step>
+<step>
+<content>Wybierz klienta - &quot;Jan Kowalski&quot; z listy klient&amp;oacute;w banku, wybierz walutę - &quot;Rupee&quot; z listy dostępnych walut i zatwierdź przyciskiem Process</content><expected>Po zatwierdzeniu wyświetla się komunikat: &quot;Account created successfuly with account Number:&quot; + numer. Numer konta generowany jest automatycznie, konto z danym numerem zostaje poprawnie dodane do listy kont danego klienta</expected><actual>Po zatwierdzeniu wyświetla się komunikat: &quot;Account created successfuly with account Number:1020&quot;</actual><status>Untested</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-18T14:08:15Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Untested</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T11</id>
+				<title>Open Account niepoprawne dodanie konta</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+															<steps_separated><step>
+<content>Wybierz zakładkę Open Account</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</expected></step>
+<step>
+<content>Wybierz klienta - &quot;Jan Kowalski&quot; z listy klient&amp;oacute;w banku, nie wybieraj żadnej waluty z listy dostępnych walut i zatwierdź przyciskiem Process</content><expected>Po zatwierdzeniu konto nie zostaje dodane, przy niewypełnionym polu wyświetla się komunikat/tooltip &quot;Proszę wybrać jedną z opcji na tej liście&quot;</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C12</caseid>
+																			<casestatus></casestatus>
+																<caseassignedto></caseassignedto>
+																	<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2024-02-18T14:41:36Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Wybierz zakładkę Open Account</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</expected><actual>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</actual><status>Passed</status></step>
+<step>
+<content>Wybierz klienta - &quot;Jan Kowalski&quot; z listy klient&amp;oacute;w banku, nie wybieraj żadnej waluty z listy dostępnych walut i zatwierdź przyciskiem Process</content><expected>Po zatwierdzeniu konto nie zostaje dodane, przy niewypełnionym polu wyświetla się komunikat/tooltip &quot;Proszę wybrać jedną z opcji na tej liście&quot;</expected><actual>Po zatwierdzeniu konto nie zostaje dodane, przy niewypełnionym polu wyświetla się komunikat/tooltip &quot;Proszę wybrać jedną z opcji na tej liście&quot;</actual><status>Passed</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-18T14:08:15Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Untested</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+		<section>
+		<name>Test funkcjonalności Customers</name>
+		<description>Weryfikacja poprawności działania funkcjonalności Customers</description>
+						<tests>
+						            																																																			<test>
+				<id>T12</id>
+				<title>Customers - usunięcie klienta</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+															<steps_separated><step>
+<content>Wybierz zakładkę Customers</content><expected>Po kliknięciu zakładki wyświetlana jest lista klient&amp;oacute;w banku, w formie tabeli z kolumnami: 1. First name 2. Last Name 3. Post Code 4. Account Number 5. Delete Customer (z przyciskiem &quot;Delete&quot; w każdym wierszu z danym klientem)</expected></step>
+<step>
+<content>Wybierz klienta do usunięcia - &quot;Jan Kowalski&quot; i naciśnij przycisk Delete</content><expected>Po naciśnięciu Delete wyświetla się monit z pytaniem o potwierdzenie operacji usunięcia klienta, a po potwierdzeniu wyświetla się komunikat o pomyślnym usunięciu klienta. Klient &quot;Jan Kowalski&quot; zostaje usunięty z listy klient&amp;oacute;w</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C13</caseid>
+																			<casestatus></casestatus>
+																<caseassignedto></caseassignedto>
+																	<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2024-02-18T14:44:41Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Wybierz zakładkę Customers</content><expected>Po kliknięciu zakładki wyświetlana jest lista klient&amp;oacute;w banku, w formie tabeli z kolumnami: 1. First name 2. Last Name 3. Post Code 4. Account Number 5. Delete Customer (z przyciskiem &quot;Delete&quot; w każdym wierszu z danym klientem)</expected><actual>Po kliknięciu zakładki wyświetlana jest lista klient&amp;oacute;w banku, w formie tabeli z kolumnami: 1. First name 2. Last Name 3. Post Code 4. Account Number 5. Delete Customer (z przyciskiem &quot;Delete&quot; w każdym wierszu z danym klientem)</actual><status>Passed</status></step>
+<step>
+<content>Wybierz klienta do usunięcia - &quot;Jan Kowalski&quot; i naciśnij przycisk Delete</content><expected>Po naciśnięciu Delete wyświetla się monit z pytaniem o potwierdzenie operacji usunięcia klienta, a po potwierdzeniu wyświetla się komunikat o pomyślnym usunięciu klienta. Klient &quot;Jan Kowalski&quot; zostaje usunięty z listy klient&amp;oacute;w</expected><actual>Po naciśnięciu Delete nie pojawia się monit o potwierdzenie operacji usunięcia klienta - klient usuwany jest natychmiast po wciśnięciu Delete</actual><status>Failed</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-18T14:08:15Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Untested</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+		<section>
+		<name>Test przycisku Login</name>
+		<description>Weryfikacja poprawności działania przycisku Login</description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Michał Ryzner - Home button</name>
+		<description>Test działania przycisku Home</description>
+									</section>
+</sections>
+</run>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<run>
+	<id>R3</id>
+	<name>Test Run 2/19/2024</name>
+	<description>Trzeci Test run z dnia 19.02.2024</description>
+	<config></config>
+	<createdon>2024-02-19T12:29:54Z</createdon>
+		<completed>false</completed>
+		<milestone></milestone>
+	<stats>
+										<passed>
+			<percent>100</percent>
+			<count>2</count>
+		</passed>
+											<blocked>
+			<percent>0</percent>
+			<count>0</count>
+		</blocked>
+											<untested>
+			<percent>0</percent>
+			<count>0</count>
+		</untested>
+											<retest>
+			<percent>0</percent>
+			<count>0</count>
+		</retest>
+											<failed>
+			<percent>0</percent>
+			<count>0</count>
+		</failed>
+																																																				</stats>	<sections>
+		<section>
+		<name>Michał Ryzner - Customer Test Suite</name>
+		<description>Testy sekcji Customer i jej podsekcji</description>
+										<sections>
+		<section>
+		<name>Test przycisku Customer Login</name>
+		<description>test poprawności zachowania przycisku Customer Login</description>
+									</section>
+		<section>
+		<name>Testy pola Transactions</name>
+		<description>testy funkcjonalności dostępnych w polu Transactions</description>
+									</section>
+		<section>
+		<name>Test przycisku Deposit</name>
+		<description>test poprawności zachowania przycisku Deposit</description>
+									</section>
+		<section>
+		<name>Test przycisku Withdrawal</name>
+		<description>test poprawności zachowania przycisku Withdrawal</description>
+									</section>
+		<section>
+		<name>Logout button test</name>
+		<description>Weryfikacja poprawności działania przycisku Logout</description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Michał Ryzner - Bank Manager Test Suite</name>
+		<description>Testy sekcji Bank Manager i jej podsekcji</description>
+										<sections>
+		<section>
+		<name>Test funkcjonalności Add Customer</name>
+		<description>Weryfikacja poprawności działania funkcji Add Customer</description>
+									</section>
+		<section>
+		<name>Test funkcjonalności Open Account</name>
+		<description>Weryfikacja poprawności działania funkcjonalności Open Account</description>
+									</section>
+		<section>
+		<name>Test funkcjonalności Customers</name>
+		<description>Weryfikacja poprawności działania funkcjonalności Customers</description>
+									</section>
+		<section>
+		<name>Test przycisku Login</name>
+		<description>Weryfikacja poprawności działania przycisku Login</description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Michał Ryzner - Home button</name>
+		<description>Test działania przycisku Home</description>
+						<tests>
+						            																																																			<test>
+				<id>T13</id>
+				<title>Home button customer</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<preconds>Użytkownik (klient) zalogowany jako Harry Potter na stronie banku, na której widoczne są pola: 1.wyboru konta 2. przycisk Transactions 3. przycisk Deposit 4. przycisk Withdrawl (literówka w nazwie!) oraz 5. przycisk Home w lewym, górnym rogu strony</preconds>
+															<steps_separated><step>
+<content>Wybierz przycisk Home</content><expected>Po kliknięciu przycisku następuje otwarcie strony startowej, klient zostaje wylogowany</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C15</caseid>
+																			<casestatus></casestatus>
+																<caseassignedto></caseassignedto>
+																	<status>Passed</status>
+																<assignedto>Michał R</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2024-02-19T12:32:48Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Wybierz przycisk Home</content><expected>Po kliknięciu przycisku następuje otwarcie strony startowej, klient zostaje wylogowany</expected><actual>Po kliknięciu przycisku następuje otwarcie strony startowej, klient zostaje wylogowany</actual><status>Passed</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-19T12:29:54Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Untested</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+									            																																																			<test>
+				<id>T14</id>
+				<title>Home button Bank Manager</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+															<automation_type><id>0</id><value> None</value></automation_type>
+															<preconds>Uzytkownik zalogowany jako Bank Manager na stronie banku,  z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers oraz przyciskiem Home</preconds>
+															<steps_separated><step>
+<content>Wybierz przycisk Home</content><expected>Po kliknięciu przycisku następuje otwarcie strony startowej, Bank Manager zostaje wylogowany</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C16</caseid>
+																			<casestatus></casestatus>
+																<caseassignedto></caseassignedto>
+																	<status>Passed</status>
+																<assignedto>Michał R</assignedto>
+																<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2024-02-19T12:34:40Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+															<step_results>
+																		<step>
+<content>Wybierz przycisk Home</content><expected>Po kliknięciu przycisku następuje otwarcie strony startowej, Bank Manager zostaje wylogowany</expected><actual>Po kliknięciu przycisku następuje otwarcie strony startowej, Bank Manager zostaje wylogowany</actual><status>Passed</status></step>
+								</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2024-02-19T12:29:54Z</createdon>
+																		<createdby>Michał R</createdby>
+												<status>Untested</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+</sections>
+</run>

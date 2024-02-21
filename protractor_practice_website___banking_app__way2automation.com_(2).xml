@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Michał Ryzner - Customer Test Suite</name>
+		<description>Testy sekcji Customer i jej podsekcji</description>
+										<sections>
+		<section>
+		<name>Test przycisku Customer Login</name>
+		<description>test poprawności zachowania przycisku Customer Login</description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>CustomerLogin test</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Strona https://www.way2automation.com/angularjs-protractor/banking/#/login jest dostępna, widoczne są pola 1. Customer login 2. Bank Manager Login</preconds>
+										<steps_separated><step>
+<content>Wybierz przycisk Customer Login</content><expected>Po wybraniu przycisku pojawia się pole wyboru klient&amp;oacute;w &quot;Your Name&quot;, kliknięcie w pole umożliwi wprowadzenie swojej nazwy klienta/loginu</expected></step>
+<step>
+<content>Wprowadź sw&amp;oacute;j login i zatwierdź przyciskiem &quot;Login&quot;</content><expected>Naciśnięcie &quot;Login&quot;, powoduje pojawienie się pola na hasło i wyświetlenie monitu o wpisanie hasła. Po wpisaniu poprawnego hasła i zatwierdzeniu następuje zalogowanie klienta do banku i przejście na stronę umożliwiającą wykonywanie udostępnionych przez bank operacji</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Testy pola Transactions</name>
+		<description>testy funkcjonalności dostępnych w polu Transactions</description>
+						<cases>
+												<case>
+				<id>C2</id>
+				<title>Transactions button test - wyświetlenie i aktualizacja listy transakcji</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik (klient) zalogowany jako Ron Weasly na stronie banku, na której widoczne są duże przyciski: 1. przycisk Transactions 2. przycisk Deposit 3. przycisk Withdrawl (literówka w nazwie!) oraz pola: 1. Account Number 2. Balance 3. Currency. Obok nazwiska klienta (Ron Weasly) widoczne jest pole z numerem konta (&quot;1007&quot;) na którym aktualnie wykonywane są operacje</preconds>
+										<steps_separated><step>
+<content>Wybierz przycisk Deposit</content><expected>Po wybraniu przycisku pojawia się strona, na kt&amp;oacute;rej widoczne są pola: 1. Amount to be deposited 2. przycisk Deposit 3. pole wyboru konta (gdy użytkownik posiada więcej niż 1). (Użytkownik Ron Weasly domyślnie korzysta z pierwszego konta na swojej liście - konto o numerze 1007.)</expected></step>
+<step>
+<content>Wprowadź poprawną kwotę wpłaty - &quot;100&quot; dla domyślnego konta &quot;1007&quot; i zatwierdź przyciskiem Deposit</content><expected>Po zatwierdzeniu wyświetla się komunikat &quot;Deposit successful&quot;, a pole Balance wyświetla saldo rachunku &quot;1007&quot;, uaktualnione o dokonaną wpłatę - Balance (saldo) wynosi 100</expected></step>
+<step>
+<content>Wybierz przycisk Transactions.</content><expected>Po wybraniu przycisku pojawia się lista transakcji wykonanych przez klienta w określonym przedziale czasowym(od - do) - w stopce widoczne są pola daty początkowej z lewej strony i daty końcowej z prawej - domyślny przedział czasowy to bieżący dzień i widoczna jest wykonana w kroku nr 2 transakcja.</expected></step>
+<step>
+<content>Zmień przedział czasowy przez zmianę daty początkowej - wciśnij symbol kalendarza na polu daty początkowej i naciśnij przycisk &quot;Wyczyść&quot;</content><expected>Po wciśnięciu przycisku, pole daty początkowej zostaje wyzerowane do formatu &quot;dd.mm.rrrr&quot;</expected></step>
+<step>
+<content>Wprowadź nową datę początkową &quot;01.01.2023&quot; i zatwierdź klawiszem Enter</content><expected>Widoczna jest lista transakcji dokonanych od ustawionej daty początkowej do dnia bieżącego</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Reset button test</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>180</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik (klient) zalogowany jako Harry Potter na stronie banku, na której widoczne są duże przyciski: 1. przycisk Transactions 2. przycisk Deposit 3. przycisk Withdrawl (literówka w nazwie!) oraz pola: 1. Account Number 2. Balance 3. Currency. Obok nazwiska klienta (Harry Potter) widoczne jest pole z numerem konta (&quot;1004&quot;) na którym aktualnie wykonywane są operacje 
+</preconds>
+										<steps_separated><step>
+<content>Wybierz przycisk Deposit</content><expected>Po wybraniu przycisku pojawia się strona, na kt&amp;oacute;rej widoczne są pola: 1. Amount to be deposited 2. przycisk Deposit 3. pole wyboru konta (gdy użytkownik posiada więcej niż 1). (Użytkownik Harry Potter domyślnie korzysta z pierwszego konta na swojej liście - konto o numerze 1004.)</expected></step>
+<step>
+<content>Wprowadź poprawną kwotę wpłaty - &quot;100&quot; dla domyślnego konta &quot;1004&quot;, na kt&amp;oacute;rym się znajdujemy i zatwierdź przyciskiem Deposit</content><expected>Po zatwierdzeniu wyświetla się komunikat &quot;Deposit successful&quot;, a pole Balance wyświetla saldo rachunku &quot;1004&quot;, uaktualnione o dokonaną wpłatę - Balance (saldo) wynosi 100</expected></step>
+<step>
+<content>Wybierz przycisk Transactions</content><expected>Po wybraniu przycisku wyświetla się lista transakcji, wykonanych na koncie &quot;1004&quot;, widoczna jest transakcja wykonana w kroku nr 2</expected></step>
+<step>
+<content>Pozostając w polu Transactions, kliknij w przycisk Reset znajdujący się w w środkowej części pola po prawej stronie</content><expected>Kliknięcie przycisku Reset powoduje wyzerowanie listy historii transakcji wykonanych na koncie 1004. Wciśnięcie przycisku Reset nie ma żadnego wpływu na saldo konta - nie została wykonana żadna operacja wpłaty/wypłaty</expected></step>
+<step>
+<content>Wciśnij przycisk Back i sprawdź saldo konta &quot;1004&quot;</content><expected>Po kliknięciu Back następuje przeniesienie na stronę klienta, na kt&amp;oacute;rej widoczne jest m.in. pole Account Number (z wybranym kontem 1004) oraz pole Balance, kt&amp;oacute;re pokazuje wartość &quot;100&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Test przycisku Deposit</name>
+		<description>test poprawności zachowania przycisku Deposit</description>
+						<cases>
+												<case>
+				<id>C4</id>
+				<title>Deposit button test - poprawna kwota</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik (klient) zalogowany jako Harry Potter na stronie banku, na której widoczne są pola: 1.wyboru konta 2. przycisk Transactions 3. przycisk Deposit 4. przycisk Withdrawal</preconds>
+										<steps_separated><step>
+<content>Kliknij przycisk Deposit i wybierz konto, na kt&amp;oacute;rym zamierzasz wykonać operację</content><expected>Pojawia się strona, na kt&amp;oacute;rej widoczne są pola: 1. Amount to be deposited 2. przycisk Deposit 3. pole wyboru konta, z prawej strony nazwy użytkownika (gdy użytkownik posiada więcej niż 1 konto)
+
+</expected></step>
+<step>
+<content>Wprowadź poprawną kwotę (dodatnią) wpłaty, zatwierdź przyciskiem &quot;Deposit&quot;</content><expected>Wyświetla się komunikat &quot;Deposit successful&quot;, a pole Balance wyświetla saldo rachunku, uaktualnione o dokonaną wpłatę</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Deposit button test - niepoprawna kwota</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik (klient) zalogowany jako Harry Potter na stronie banku, na której widoczne są pola: 1.wyboru konta 2. przycisk Transactions 3. przycisk Deposit 4. przycisk Withdrawl</preconds>
+										<steps_separated><step>
+<content>Kliknij przycisk Deposit i wybierz konto, na kt&amp;oacute;rym zamierzasz wykonać operację</content><expected>Pojawia się strona, na kt&amp;oacute;rej widoczne są pola: 1. Amount to be deposited 2. przycisk Deposit 3. pole wyboru konta (gdy użytkownik posiada więcej niż 1)</expected></step>
+<step>
+<content>Wprowadź niepoprawną kwotę (ujemną) wpłaty, zatwierdź przyciskiem &quot;Deposit&quot;</content><expected>Wyświetla się komunikat informujący o błędzie (wpłacana kwota nie może być mniejsza bądź r&amp;oacute;wna 0) a operacja nie zostaje wykonana</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Test przycisku Withdrawal</name>
+		<description>test poprawności zachowania przycisku Withdrawal</description>
+						<cases>
+												<case>
+				<id>C6</id>
+				<title>Withdrawal button test - poprawna kwota</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik (klient) zalogowany jako Harry Potter na stronie banku, na której widoczne są pola: 1.wyboru konta 2. przycisk Transactions 3. przycisk Deposit 4. przycisk Withdrawal.
+Saldo konta z którego klient dokonuje wypłatę jest dodatnie
+</preconds>
+										<steps_separated><step>
+<content>Kliknij przycisk Withdrawal</content><expected>Po kliknięciu przycisku pojawia się strona na kt&amp;oacute;rej widoczne są pola: 1. wyboru konta 2. pole Amount to be Withdrawn 3. przycisk Withdraw</expected></step>
+<step>
+<content>Wprowadź w polu &quot;Amount to be Withdrawn&quot; poprawną kwotę wypłaty (mniejszej bądź r&amp;oacute;wnej od salda rachunku), zatwierdź przyciskiem &quot;Withdraw&quot;</content><expected>Wyświetla się komunikat:&quot;Transaction successful&quot;, a pole Balance wyświetla zaktualizowane saldo rachunku, pomniejszone o dokonaną wypłatę</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>Withdrawal button test - niepoprawna kwota</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik (klient) zalogowany jako Harry Potter na stronie banku, na której widoczne są pola: 1.wyboru konta 2. przycisk Transactions 3. przycisk Deposit 4. przycisk Withdrawal</preconds>
+										<steps_separated><step>
+<content>Kliknij przycisk Withdrawal</content><expected>Po kliknięciu przycisku pojawia się strona na kt&amp;oacute;rej widoczne są pola: 1. wyboru konta 2. pole Amount to be Withdrawn 3. przycisk Withdraw</expected></step>
+<step>
+<content>Wprowadź w polu &quot;Amount to be Withdrawn&quot; niepoprawną kwotę wypłaty (większej od salda rachunku), zatwierdź przyciskiem &quot;Withdraw&quot;</content><expected>Wyświetla się komunikat:&quot;Transaction Failed. You can not withdraw amount more than the balance.&quot;, a transakcja nie zostaje wykonana</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Logout button test</name>
+		<description>Weryfikacja poprawności działania przycisku Logout</description>
+						<cases>
+												<case>
+				<id>C8</id>
+				<title>Logout button test</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik (klient) zalogowany jako Harry Potter , wyświetla się strona, na której widoczne są pola: 1.wyboru konta 2. przycisk Transactions 3. przycisk Deposit 4. przycisk Withdrawl (literówka w nazwie!) 5. przycisk Home w lewym, górnym rogu strony oraz 6. przycisk Logout w prawym, górnym rogu strony</preconds>
+										<steps_separated><step>
+<content>Wybierz przycisk Logout</content><expected>Po wybraniu przycisku wyświetla się monit z pytaniem o potwierdzenie zamiaru wylogowania. Po potwierdzeniu klient zostaje wylogowany, wyświetlana jest strona z dostępną listą klient&amp;oacute;w banku, umożliwiającą ponowne zalogowanie</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>Michał Ryzner - Bank Manager Test Suite</name>
+		<description>Testy sekcji Bank Manager i jej podsekcji</description>
+										<sections>
+		<section>
+		<name>Test funkcjonalności Add Customer</name>
+		<description>Weryfikacja poprawności działania funkcji Add Customer</description>
+						<cases>
+												<case>
+				<id>C9</id>
+				<title>Add Customer poprawne dane</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+										<steps_separated><step>
+<content>Kliknij zakładkę Add Customer</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name 3. Post Code, pod nim widoczny jest przycisk Add Customer</expected></step>
+<step>
+<content>Wprowadź przykładowe dane: 1. &quot;Jan&quot; 2. &quot;Kowalski&quot; 3. &quot;01-234&quot; i zatwierdź przyciskiem Add Customer</content><expected>Po zatwierdzeniu wyświetla się komunikat: &quot;Customer added successfuly with customer id:&quot; + numer, numer generowany jest automatycznie</expected></step>
+<step>
+<content>Wybierz zakładkę Customers</content><expected>Po wybraniu zakładki, widoczna jest tabela z danymi klient&amp;oacute;w banku, dane klienta &quot;Jan Kowalski&quot; są r&amp;oacute;wnież w tabeli</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>Add Customer niepoprawne dane</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+										<steps_separated><step>
+<content>Kliknij zakładkę Add Customer</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. First Name 2. Last Name, 3. Post Code, pod formularzem widoczny jest przycisk Add Customer</expected></step>
+<step>
+<content>Wprowadź niepełne dane klienta (brak nazwiska): 1. &quot;Adam&quot; 2. &quot;&quot; 3. &quot;01-234&quot; i zatwierdź przyciskiem Add Customer</content><expected>Po zatwierdzeniu klient nie zostaje dodany, przy niewypełnionym polu wyświetla się komunikat/tooltip &quot;Proszę wypełnić to pole&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Test funkcjonalności Open Account</name>
+		<description>Weryfikacja poprawności działania funkcjonalności Open Account</description>
+						<cases>
+												<case>
+				<id>C11</id>
+				<title>Open Account poprawne dodanie konta</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+										<steps_separated><step>
+<content>Wybierz zakładkę Open Account</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</expected></step>
+<step>
+<content>Wybierz klienta - &quot;Jan Kowalski&quot; z listy klient&amp;oacute;w banku, wybierz walutę - &quot;Rupee&quot; z listy dostępnych walut i zatwierdź przyciskiem Process</content><expected>Po zatwierdzeniu wyświetla się komunikat: &quot;Account created successfuly with account Number:&quot; + numer. Numer konta generowany jest automatycznie, konto z danym numerem zostaje poprawnie dodane do listy kont danego klienta</expected></step>
+<step>
+<content>Wybierz zakładkę Customers</content><expected>Po wybraniu zakładki, widoczna jest tabela z danymi klient&amp;oacute;w banku, w tym numerami ich kont, klient &quot;Jan Kowalski&quot; posiada konto o numerze 1020</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>Open Account niepoprawne dodanie konta</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+										<steps_separated><step>
+<content>Wybierz zakładkę Open Account</content><expected>Po kliknięciu zakładki wyświetla się formularz z polami: 1. Customer 2. Currency, pod formularzem widoczny jest przycisk Process</expected></step>
+<step>
+<content>Wybierz klienta - &quot;Jan Kowalski&quot; z listy klient&amp;oacute;w banku, nie wybieraj żadnej waluty z listy dostępnych walut i zatwierdź przyciskiem Process</content><expected>Po zatwierdzeniu konto nie zostaje dodane, przy niewypełnionym polu wyświetla się komunikat/tooltip &quot;Proszę wybrać jedną z opcji na tej liście&quot;</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Test funkcjonalności Customers</name>
+		<description>Weryfikacja poprawności działania funkcjonalności Customers</description>
+						<cases>
+												<case>
+				<id>C13</id>
+				<title>Customers - usunięcie klienta</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>300</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik zalogowany jako Bank Manager, wyświetla się strona z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers</preconds>
+										<steps_separated><step>
+<content>Wybierz zakładkę Customers</content><expected>Po kliknięciu zakładki wyświetlana jest lista klient&amp;oacute;w banku, w formie tabeli z kolumnami: 1. First name 2. Last Name 3. Post Code 4. Account Number 5. Delete Customer (z przyciskiem &quot;Delete&quot; w każdym wierszu z danym klientem)</expected></step>
+<step>
+<content>Wybierz klienta do usunięcia - &quot;Jan Kowalski&quot; i naciśnij przycisk Delete</content><expected>Po naciśnięciu Delete wyświetla się monit z pytaniem o potwierdzenie operacji usunięcia klienta, a po potwierdzeniu wyświetla się komunikat o pomyślnym usunięciu klienta. Klient &quot;Jan Kowalski&quot; zostaje usunięty z listy klient&amp;oacute;w</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+			<section>
+		<name>Test przycisku Login</name>
+		<description>Weryfikacja poprawności działania przycisku Login</description>
+						<cases>
+												<case>
+				<id>C14</id>
+				<title>Login button test</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Strona https://www.way2automation.com/angularjs-protractor/banking/#/login jest dostępna, widoczne są pola 1. Customer login 2. Bank Manager Login</preconds>
+										<steps_separated><step>
+<content>Wybierz przycisk Bank Manager Login</content><expected>Po wybraniu przycisku pojawia się monit o wprowadzenie hasła menadżera banku. Po wpisaniu poprawnego hasła menadżer zostaje zalogowany. Wyświetla się strona z zakładkami: 1. Add Customer 2. Open Account 3. Customers oraz przycisk Home</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+			</section>
+			<section>
+		<name>Michał Ryzner - Home button</name>
+		<description>Test działania przycisku Home</description>
+						<cases>
+												<case>
+				<id>C15</id>
+				<title>Home button customer</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Użytkownik (klient) zalogowany jako Harry Potter na stronie banku, na której widoczne są pola: 1.wyboru konta 2. przycisk Transactions 3. przycisk Deposit 4. przycisk Withdrawl (literówka w nazwie!) oraz 5. przycisk Home w lewym, górnym rogu strony</preconds>
+										<steps_separated><step>
+<content>Wybierz przycisk Home</content><expected>Po kliknięciu przycisku następuje otwarcie strony startowej, klient zostaje wylogowany</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+															<case>
+				<id>C16</id>
+				<title>Home button Bank Manager</title>
+												<template>Test Case (Steps)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate>120</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Uzytkownik zalogowany jako Bank Manager na stronie banku,  z widocznymi zakładkami: 1. Add Customer 2. Open Account 3. Customers oraz przyciskiem Home</preconds>
+										<steps_separated><step>
+<content>Wybierz przycisk Home</content><expected>Po kliknięciu przycisku następuje otwarcie strony startowej, Bank Manager zostaje wylogowany</expected></step>
+</steps_separated>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
